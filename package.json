@@ -1,0 +1,26 @@
+{
+  "name": "community_app",
+  "version": "1.0.0",
+  "description": "NA",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon back-end/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon back-end/server.js",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon back-end/server.js"
+  },
+  "author": "Mohd Shadab: shaad82663@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "mongoose-slug-generator": "^1.0.4",
+    "nodemon": "^2.0.15",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9",
+    "validator": "^13.7.0"
+  }
+}
