@@ -117,6 +117,76 @@ The REST API used in the code is described below.
     success : true,
     message : "Logged Out"
     
+## Add Role (Protected Route)
+
+### Request
+
+`POST /role`
+
+     http://localhost:4000/role/ 
+
+
+#### Sample Request (JSON)
+
+    {
+     "name" : "Community Admin"
+    }
+
+### Response
+  
+        HTTP/1.1 200 OK
+        success : true,
+        data : {...data}
+        
+### Error (In case of not logged in user) //Same for other protected routes.
+       {
+       "success": false,
+        "error": {
+        "statusCode": 500
+         },
+         "errMessage": "Login first to access resourses.",
+         "stack" : {error-stack}
+       }
+
+## Get All Roles (Protected Route)
+
+### Request
+
+`GET /role`
+
+     http://localhost:4000/role/ 
+
+
+#### Sample Request (JSON)
+
+    {}
+
+### Response
+  
+        HTTP/1.1 200 OK
+        success : true,
+        roles : {...roles}
+
+
+## Get all the events for today (Protected Route : Login first)
+
+### Request
+
+`GET /api/v1/events/today`
+
+     http://localhost:4000/api/v1/events/today  
+     
+#### Sample Request (JSON) 
+  
+    {} //NO INPUT REQUIRED         
+
+### Response
+  
+        HTTP/1.1 200 OK
+        success : true,
+        count : events.length,
+        events : [...events]
+    
 ## Add Event (Protected Route : Login first)
 
 ### Request
@@ -171,7 +241,6 @@ The REST API used in the code is described below.
         success : true,
         count : events.length,
         events : [...events]
-    
 
         
 ## Get all users for list of uid  
